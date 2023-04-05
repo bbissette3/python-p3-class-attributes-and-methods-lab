@@ -32,14 +32,14 @@ class Song:
 
     @classmethod
     def increase_genre_count(cls, genre):
-        if cls.genre_count.get(genre):
+        if genre in cls.genre_count:
             cls.genre_count[genre] += 1
         else:
             cls.genre_count[genre] = 1
 
     @classmethod
     def increase_artist_count(cls, artist):
-        if cls.artist_count.get(artist):
+        if artist in cls.artist_count:
             cls.artist_count[artist] +=1
         else:
             cls.artist_count[artist] = 1
